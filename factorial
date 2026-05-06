@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int factorial(int n) {
+    // Base case: factorial of 0 is 1
+    if (n == 0)
+        return 1;
+
+    // Recursive case: n! = n * (n-1)!
+    return n * factorial(n - 1);
+}
+
+int main() {
+    cout << "Factorial of 5 = " << factorial(5) << endl;
+    cout << "Factorial of 0 = " << factorial(0) << endl;
+    int fact;
+    cout << "Enter Number:";
+    cin >> fact;
+    cout << "Factorial of " << fact << " = " << factorial(fact) << endl;
+    return 0;
+}
+
