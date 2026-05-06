@@ -1,0 +1,23 @@
+#include<iostream>
+#include <string>
+using namespace std;
+string reverseString(string s) {
+    if (s.empty()||s.length()==1)
+    {
+        return s;
+    }
+    // Recursive case: reverse the rest, then add first char at end
+    // -- write here --
+    return reverseString(s.substr(1)) + s[0];
+}
+
+int main() {
+    cout << reverseString("hello") << endl;  // Expected: olleh
+    cout << reverseString("racecar") << endl;  // Expected: racecar
+        string n;
+    cout << "Enter string:";
+    cin >> n;
+    cout << reverseString(n) << endl;
+    return 0;
+}
+
